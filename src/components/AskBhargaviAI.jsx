@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Bot, Send, X, Sparkles, User, RefreshCw } from 'lucide-react';
 
-const GEMINI_API_KEY = 'AIzaSyAm-EQ7-ZYjnP9JYvXosX7p-ptQIu05s_I';
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY || 'AIzaSyAm-EQ7-ZYjnP9JYvXosX7p-ptQIu05s_I';
 
 const API_ENDPOINTS = [
   `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`,
